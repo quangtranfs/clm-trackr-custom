@@ -254,14 +254,14 @@
 					overlayCC.clearRect(0, 0, vid_width, vid_height);
 					// psrElement.innerHTML = "score :" + ctrack.getScore().toFixed(4);
 					if (ctrack.getCurrentPosition()) {
-						// console.log(ctrack.getCurrentPosition()[16]);
-						overlayCC.strokeStyle="#FF0000";
 
 						var scale = ctrack.getCurrentPosition()[16][0] - ctrack.getCurrentPosition()[20][0];
-						// console.log(ctrack.getCurrentPosition()[16][0], ctrack.getCurrentPosition()[21][0]);
 
 		    		overlayCC.drawImage(hornImg, ctrack.getCurrentPosition()[20][0],ctrack.getCurrentPosition()[20][1] - (scale * (75/49)),scale, scale * (75/49));
-						overlayCC.strokeRect(ctrack.getCurrentPosition()[20][0],ctrack.getCurrentPosition()[20][1],5,5);
+
+						// overlayCC.strokeStyle="#FF0000";
+						// overlayCC.strokeRect(ctrack.getCurrentPosition()[20][0],ctrack.getCurrentPosition()[20][1],5,5);
+
 						ctrack.draw(overlay);
 					}
 				}
